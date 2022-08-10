@@ -1,3 +1,3 @@
-const nombre = "Franco"
+var nombre = "Franco"
 
 window.alert(nombre)
