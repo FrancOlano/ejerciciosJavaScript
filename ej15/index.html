@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="font-family: 'Inconsolata', monospace">
+    <div
+      class="add"
+      style="
+        border: 1px solid black;
+        display: flex;
+        width: 300px;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        padding: 10px; ;
+      "
+    >
+      <h4>Add Item</h4>
+      <div>
+        <button id="push" onclick="push()">push</button>
+        <button id="unshift" onclick="unshift()">unshift</button>
+        <button id="insert" onclick="insert()">insert at</button>
+        <input type="number" id="insertI" style="width: 30px" />
+      </div>
+    </div>
+    <div
+      class="delete"
+      style="
+        border: 1px solid black;
+        display: flex;
+        width: 300px;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        padding: 10px;
+      "
+    >
+      <h4>Remove Item</h4>
+      <div>
+        <button id="pop" onclick="pop()">pop</button>
+        <button id="shift" onclick="shift()">shift</button>
+        <button id="remove" onclick="remove()">remove at</button>
+        <input type="number" id="removeI" style="width: 30px" />
+      </div>
+    </div>
+    <br />
+
+    <div style="font-size: larger; font-weight: 900; display: inline-block">
+      [
+      <div
+        id="array"
+        style="font-size: larger; font-weight: 900; display: inline-block"
+      ></div>
+      ]
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
