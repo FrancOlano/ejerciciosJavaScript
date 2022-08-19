@@ -1,0 +1,26 @@
+.divDark{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.divRosa{
+    background-color: rgb(252, 210, 217);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#btn{
+    height: 50px;
+    width: 150px;
+}
+img{
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
