@@ -29,3 +29,7 @@ p{
     border: 3 solid rgb(1, 66, 44);
     border-radius: 5px;
 }
+.opciones{
+    display: flex;
+    gap: 5px;
+}

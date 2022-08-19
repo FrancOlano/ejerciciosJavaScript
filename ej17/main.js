@@ -2,7 +2,9 @@ var piedra = "✊";
 var papel = "✋";
 var tijera = "✌";
 
-let elegir = document.getElementById("elegir");
+let btnPiedra = document.getElementById("piedra");
+let btnPapel = document.getElementById("papel");
+let btnTijera = document.getElementById("tijera");
 let player;
 let computer;
 
@@ -12,11 +14,11 @@ let results = document.getElementById("results");
 
 function actaulizarResults() {
   if (puntajeComputer >= 3) {
-    elegir.disabled
+    
     results.innerHTML =
     "Gana la Computadora";
   }else if(puntajePlayer >= 3){
-    elegir.disabled
+    
     results.innerHTML =
     "Ganaste 🎉";
   } else {
@@ -42,20 +44,105 @@ const computerPlay = () => {
   }
 };
 console.log("🏁Que comienze el juego🏁");
-const jugada = () => {
-  let input = prompt("Escriba su jugada. Piedra, Papel o Tijera");
-  let normalizeInput = input.toLowerCase();
-  if (normalizeInput === "piedra") {
-    player = piedra;
-  } else if (normalizeInput === "papel") {
-    player = papel;
-  } else if (normalizeInput === "tijera") {
-    player = tijera;
-  }
-};
 
-elegir.addEventListener("click", () => {
-  jugada();
+
+
+btnPiedra.addEventListener("click", () => {
+  player = piedra
+  computerPlay();
+
+  if (player == computer) {
+    console.log("tu: " + player);
+    console.log("computer: " + computer);
+    console.log("empate");
+  } else if (player == tijera && computer == piedra) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para la computadora");
+    puntajeComputer++;
+    actaulizarResults();
+  } else if (player == papel && computer == tijera) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para la computadora");
+    puntajeComputer++;
+    actaulizarResults();
+  } else if (player == piedra && computer == papel) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para la computadora");
+    puntajeComputer++
+    actaulizarResults();
+  } else if (player == piedra && computer == tijera) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para ti");
+    puntajePlayer++
+    actaulizarResults();
+  } else if (player == papel && computer == piedra) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para ti");
+    puntajePlayer++
+    actaulizarResults();
+  } else if (player == tijera && computer == papel) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para ti");
+    puntajePlayer++
+    actaulizarResults();
+  }
+});
+
+btnPapel.addEventListener("click", () => {
+  player = papel
+  computerPlay();
+
+  if (player == computer) {
+    console.log("tu: " + player);
+    console.log("computer: " + computer);
+    console.log("empate");
+  } else if (player == tijera && computer == piedra) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para la computadora");
+    puntajeComputer++;
+    actaulizarResults();
+  } else if (player == papel && computer == tijera) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para la computadora");
+    puntajeComputer++;
+    actaulizarResults();
+  } else if (player == piedra && computer == papel) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para la computadora");
+    puntajeComputer++
+    actaulizarResults();
+  } else if (player == piedra && computer == tijera) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para ti");
+    puntajePlayer++
+    actaulizarResults();
+  } else if (player == papel && computer == piedra) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para ti");
+    puntajePlayer++
+    actaulizarResults();
+  } else if (player == tijera && computer == papel) {
+    console.log("tu: " + player);
+    console.log("computadora: " + computer);
+    console.log("Punto para ti");
+    puntajePlayer++
+    actaulizarResults();
+  }
+});
+
+btnTijera.addEventListener("click", () => {
+  player = tijera
   computerPlay();
 
   if (player == computer) {
