@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: max(800px);
 }
 #btn{
     height: 50px;
